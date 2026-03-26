@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Campos Formativos</title>
-
-<!-- CSS -->
-<link rel="stylesheet" href="styles.css">
-
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -15,27 +12,26 @@
 
 <h2>Arrastra cada elemento al campo formativo correcto</h2>
 
-<div class="columns">
+<div class="main">
 
-<!-- CAMPO 1 -->
+<!-- CAMPOS -->
+<div class="fields">
+
 <div class="field">
   <strong>🌱 Ética, Naturaleza y Sociedades</strong>
-  <div class="dropzone" data-correct="Derechos Humanos y Cultura de Paz"></div>
+  <div class="dropzone" data-correct="Derechos Humanos,Cultura de Paz"></div>
 </div>
 
-<!-- CAMPO 2 -->
 <div class="field">
   <strong>👥 De lo Humano y lo Comunitario</strong>
-  <div class="dropzone" data-correct="Sentido de Pertenencia y Autocuidado"></div>
+  <div class="dropzone" data-correct="Sentido de Pertenencia,Autocuidado"></div>
 </div>
 
-<!-- CAMPO 3 -->
 <div class="field">
   <strong>💬 Lenguajes</strong>
   <div class="dropzone" data-correct="Comunicación Asertiva"></div>
 </div>
 
-<!-- CAMPO 4 -->
 <div class="field">
   <strong>🔬 Saberes y pensamiento científico</strong>
   <div class="dropzone" data-correct="Indagación y Prevención,Pensamiento Crítico"></div>
@@ -43,23 +39,32 @@
 
 </div>
 
-<!-- PALABRAS -->
-<div class="items">
+<!-- BANCO -->
+<div class="bank" id="bank">
 
-<div class="item" draggable="true">Derechos Humanos y Cultura de Paz</div>
-<div class="item" draggable="true">Sentido de Pertenencia y Autocuidado</div>
+<div class="item" draggable="true">Derechos Humanos</div>
+<div class="item" draggable="true">Cultura de Paz</div>
+<div class="item" draggable="true">Sentido de Pertenencia</div>
+<div class="item" draggable="true">Autocuidado</div>
 <div class="item" draggable="true">Comunicación Asertiva</div>
 <div class="item" draggable="true">Indagación y Prevención</div>
 <div class="item" draggable="true">Pensamiento Crítico</div>
 
 </div>
 
-<button onclick="checkAnswers()">Verificar respuestas</button>
+</div>
+
+<!-- BOTONES -->
+<div class="actions">
+<button onclick="checkAnswers()">Verificar</button>
+<button onclick="resetGame()">Reiniciar</button>
+</div>
+
+<!-- MENSAJE -->
+<div id="message"></div>
 
 </div>
 
-<!-- JS -->
-<script src="script.js"></script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
