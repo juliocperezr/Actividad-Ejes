@@ -20,6 +20,8 @@ document.querySelectorAll('.dropzone').forEach(zone=>{
 /* VALIDAR */
 function checkAnswers(){
 
+  let allCorrect = true;
+
   document.querySelectorAll('.dropzone').forEach(zone=>{
     
     let correctList = zone.dataset.correct.split(',');
@@ -33,7 +35,32 @@ function checkAnswers(){
       zone.classList.add('correct');
     }else{
       zone.classList.add('incorrect');
+      allCorrect = false;
     }
   });
 
+  let message = document.getElementById('message');
+
+  if(allCorrect){
+    message.innerHTML = "✅ ES CORRECTO";
+    message.style.color = "green";
+  }else{
+    message.innerHTML = "❌ VUELVE A INTENTARLO";
+    message.style.color = "red";
+  }
+}
+
+/* RESET */
+function resetGame(){
+  const bank = document.getElementById('bank');
+
+  document.querySelectorAll('.item').forEach(item=>{
+    bank.appendChild(item);
+  });
+
+  document.querySelectorAll('.dropzone').forEach(zone=>{
+    zone.classList.remove('correct','incorrect');
+  });
+
+  document.getElementById('message').innerHTML = "";
 }
