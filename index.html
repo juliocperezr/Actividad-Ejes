@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Campos Formativos</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Arrastra cada elemento al campo formativo correcto</h2>
+
+<div class="columns">
+
+<!-- CAMPO 1 -->
+<div class="field">
+  <strong>🌱 Ética, Naturaleza y Sociedades</strong>
+  <div class="dropzone" data-correct="Derechos Humanos y Cultura de Paz"></div>
+</div>
+
+<!-- CAMPO 2 -->
+<div class="field">
+  <strong>👥 De lo Humano y lo Comunitario</strong>
+  <div class="dropzone" data-correct="Sentido de Pertenencia y Autocuidado"></div>
+</div>
+
+<!-- CAMPO 3 -->
+<div class="field">
+  <strong>💬 Lenguajes</strong>
+  <div class="dropzone" data-correct="Comunicación Asertiva"></div>
+</div>
+
+<!-- CAMPO 4 -->
+<div class="field">
+  <strong>🔬 Saberes y pensamiento científico</strong>
+  <div class="dropzone" data-correct="Indagación y Prevención,Pensamiento Crítico"></div>
+</div>
+
+</div>
+
+<!-- PALABRAS -->
+<div class="items">
+
+<div class="item" draggable="true">Derechos Humanos y Cultura de Paz</div>
+<div class="item" draggable="true">Sentido de Pertenencia y Autocuidado</div>
+<div class="item" draggable="true">Comunicación Asertiva</div>
+<div class="item" draggable="true">Indagación y Prevención</div>
+<div class="item" draggable="true">Pensamiento Crítico</div>
+
+</div>
+
+<button onclick="checkAnswers()">Verificar respuestas</button>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
