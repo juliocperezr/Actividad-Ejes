@@ -7,37 +7,35 @@ body{
 }
 
 .container{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
 }
 
 h2{
   text-align:center;
   color:#661639;
-  margin-bottom:15px;
 }
 
-/* COLUMNAS */
-.columns{
+/* LAYOUT */
+.main{
   display:flex;
   gap:20px;
-  flex-wrap:wrap;
 }
 
 /* CAMPOS */
-.field{
-  flex:1;
-  min-width:250px;
-  background:#fff;
-  padding:15px;
-  border-radius:12px;
-  border-top:6px solid #661639;
+.fields{
+  flex:3;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
-/* VARIACIÓN DE COLOR */
-.field:nth-child(2){border-top-color:#9e294b;}
-.field:nth-child(3){border-top-color:#ceb585;}
-.field:nth-child(4){border-top-color:#661639;}
+.field{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  border-top:6px solid #661639;
+}
 
 /* DROP */
 .dropzone{
@@ -46,52 +44,76 @@ h2{
   border-radius:8px;
   padding:10px;
   margin-top:10px;
-  transition:0.3s;
+}
+
+/* BANCO */
+.bank{
+  flex:1;
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
+  border:2px solid #ceb585;
 }
 
 /* ITEMS */
-.items{
-  margin-top:25px;
+.item{
+  background:#9e294b;
+  color:#fff;
+  padding:10px;
+  margin:5px 0;
+  border-radius:6px;
+  cursor:grab;
   text-align:center;
 }
 
-.item{
-  display:inline-block;
-  background:#9e294b;
-  color:#fff;
-  padding:10px 12px;
-  border-radius:8px;
-  margin:5px;
-  cursor:grab;
+/* BOTONES */
+.actions{
+  text-align:center;
+  margin-top:20px;
 }
 
-.item:hover{
-  background:#661639;
-}
-
-/* RESULTADOS */
-.correct{
-  border:2px solid #28a745 !important;
-  background:#eaf7ed;
-}
-
-.incorrect{
-  border:2px solid #dc3545 !important;
-  background:#fdeaea;
-}
-
-/* BOTON */
 button{
-  display:block;
-  margin:20px auto;
-  padding:10px 20px;
+  margin:5px;
+  padding:10px 15px;
   background:#661639;
   color:#fff;
   border:none;
-  border-radius:8px;
+  border-radius:6px;
   cursor:pointer;
 }
 
-button:hover{
-  background:#9e294b;
+/* MENSAJE */
+#message{
+  text-align:center;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+/* RESULTADO */
+.correct{
+  border:2px solid green !important;
+}
+
+.incorrect{
+  border:2px solid red !important;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+  .main{
+    flex-direction:row;
+  }
+
+  .fields{
+    flex:2;
+  }
+
+  .bank{
+    flex:1;
+    position:sticky;
+    top:10px;
+    height:fit-content;
+  }
+
 }
